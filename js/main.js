@@ -2,7 +2,7 @@ window.onload = function(){
 var mobileDetect = (navigator.userAgent.match(/Android|BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile/i)) ? true : false ;
 var a = document.querySelectorAll('.box');
 var evt;
-mobileDetect ? 'touchmove' : 'scroll';
+mobileDetect ? evt = 'touchmove' : evt = 'scroll';
 function offset(el) {
     var rect = el.getBoundingClientRect(),
     scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
