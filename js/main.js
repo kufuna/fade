@@ -1,7 +1,7 @@
 window.onload = function(){
 
-alert('page loaded')	
-	
+var a = document.querySelectorAll('.box');
+
 function offset(el) {
     var rect = el.getBoundingClientRect(),
     scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
@@ -14,7 +14,6 @@ window.addEventListener('scroll',function(){
 		if (window.scrollY > offset(a[i]).top) {
 			var differance = window.scrollY - offset(a[i]).top;
 			var percentage = differance / a[i].clientHeight;
-			console.log(percentage)
 			a[i].style.opacity = percentage
 		}
 	}
