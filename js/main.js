@@ -1,8 +1,7 @@
 window.onload = function(){
-var mobileDetect = (navigator.userAgent.match(/Android|BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile/i)) ? true : false ;
-// var a = document.querySelectorAll('.box');
-// var evt;
-// mobileDetect ? evt = 'touchmove' : evt = 'scroll';
+
+alert('page loaded')	
+	
 function offset(el) {
     var rect = el.getBoundingClientRect(),
     scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
