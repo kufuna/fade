@@ -1,7 +1,8 @@
 window.onload = function(){
-
+var mobileDetect = (navigator.userAgent.match(/Android|BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile/i)) ? true : false ;
 var a = document.querySelectorAll('.box');
-
+var evt;
+mobileDetect ? 'touchmove' : 'scroll';
 function offset(el) {
     var rect = el.getBoundingClientRect(),
     scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
@@ -9,7 +10,7 @@ function offset(el) {
     return { top: rect.top + scrollTop, left: rect.left + scrollLeft }
 }
 
-window.addEventListener('touchmove',function(){
+window.addEventListener(evt,function(){
 	for (var i = 0; i < a.length; i++) {
 		if (window.scrollY > offset(a[i]).top) {
 			var differance = window.scrollY - offset(a[i]).top;
